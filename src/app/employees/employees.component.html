@@ -1,0 +1,21 @@
+<table cellspacing='0'>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total Time in Month</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let employee of employees " [ngClass]="{ 'highlight':(employee.WorkingHours < 100) } ">
+      <td>{{employee.EmployeeName}}</td>
+      <td>{{employee.WorkingHours}} hrs</td>
+      <td><a href="">Edit</a></td>
+    </tr>
+  </tbody>
+
+</table>
+
+<p-chart type="pie" [data]="data" [options]="chartOptions" class="pie" ></p-chart>
